@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862b37c77ae43401abf18d42c8e17aec, type: 3}
   m_Name: Speedrun
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  cardName: Swift
-  description: +50% Speed (15s)
+  cardName: Speedrun
+  description: '+100% Speed (15s)
+
+    +2 Clank'
   artwork: {fileID: 0}
   effects:
-  - {fileID: 11400000, guid: d835a6a1a556e4ed0a20a044bad6e927, type: 2}
-  maxCopiesInDeck: 5
+  - {fileID: 11400000, guid: db9323f95677c4d6ea8e3579848ad112, type: 2}
+  - {fileID: 11400000, guid: 75d2458f659814b18b4d885aa79dd3b3, type: 2}
+  maxCopiesInDeck: 2
   cost: 0
