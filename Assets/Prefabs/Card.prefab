@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.5, y: -34.875}
+  m_AnchoredPosition: {x: 112.5, y: -53.745}
   m_SizeDelta: {x: 193, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3040626917531783366
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Card Name
+  m_text: Deck Dungeon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f2f703402a504bc9af4fb7fe8b9202e, type: 2}
   m_sharedMaterial: {fileID: -9045631269002327936, guid: 2f2f703402a504bc9af4fb7fe8b9202e, type: 2}
@@ -239,7 +239,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Card effect that has a long name so that the text wraps
+  m_text: 'By Andy Wong
+
+
+    Inspired by the Minecraft minigame:
+
+    Decked Out'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d44dae11d78c84440856f5877b1f69b1, type: 2}
   m_sharedMaterial: {fileID: -7145064993129048173, guid: d44dae11d78c84440856f5877b1f69b1, type: 2}

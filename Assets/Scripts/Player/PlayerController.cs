@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -47,5 +48,17 @@ public class PlayerController : MonoBehaviour
         if (nearbyArtifact == null) return;
         nearbyArtifact.Collect(stats);
         nearbyArtifact = null;
+    }
+
+    public void ApplySpeedBoost(float multiplier, float duration)
+    {
+        StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
+    }
+
+    private IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
+    {
+        speed *= multiplier;
+        yield return new WaitForSeconds(duration);
+        speed /= multiplier;
     }
 }

@@ -6,26 +6,31 @@ using Random = UnityEngine.Random;
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private float drawInterval = 30f;
-    [SerializeField] private List<CardData> startingDeck = new();
+    [SerializeField] public List<CardData> startingDeck = new();
     [SerializeField] private CardData stumbleCard;
     [SerializeField] private float stumbleInterval = 120f;
 
     private List<CardData> deck = new();
+    private int totalCardCount;
     private float timer;
     private float stumbleTimer;
     
     public event Action<int> OnDeckChanged;
     public event Action<CardData> OnCardDrawn;
+    
+    public int TotalCards => totalCardCount;
+    public int RemainingCards => deck.Count;
 
     public void LoadDeck(List<CardData> cards)
     {
         deck = new List<CardData>(cards);
+        totalCardCount = deck.Count;
         Shuffle(deck);
     }
 
     private void Start()
     {
-        LoadDeck(startingDeck);
+        // LoadDeck(startingDeck);
     }
 
     private void Update()

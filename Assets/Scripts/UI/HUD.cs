@@ -20,18 +20,22 @@ public class HUD : MonoBehaviour
     {
         stats = FindAnyObjectByType<PlayerStats>();
         var deck = FindAnyObjectByType<DeckManager>();
+        
+        deck.LoadDeck(deck.startingDeck);
 
         stats.OnHealthChanged += UpdateHealth;
+        deck.OnDeckChanged += UpdateCards;
         stats.OnTreasureChanged += UpdateTreasure;
         stats.OnStealthChanged += UpdateStealth;
         stats.OnCoinsChanged += UpdateCoins;
-        deck.OnDeckChanged += UpdateCards;
         stats.OnClankChanged += UpdateClank;
 
         healthBar.Init(stats.MaxHealth);
+        cardsBar.Init(deck.TotalCards);
         treasureBar.Init(stats.MaxTreasure);
         stealthBar.Init(stats.MaxStealth);
         UpdateHealth(stats.Health);
+        UpdateCards(deck.RemainingCards);
         UpdateTreasure(stats.Treasure);
         UpdateStealth(stats.Stealth);
         UpdateCoins(stats.Coins);
@@ -60,7 +64,7 @@ public class HUD : MonoBehaviour
 
     private void UpdateCards(int remaining)
     {
-
+        cardsBar.SetValue(remaining);
     }
 
     private void UpdateClank(float clank)
